@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gajalakshmi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.5);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.resume-btn{
+    padding:10px 20px;
+    background:#38bdf8;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.4s;
+}
+
+.resume-btn:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:140px 8%;
+    min-height:100vh;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h3{
+    font-size:28px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    margin:15px 0;
+    color:#38bdf8;
+}
+
+.hero-text h2{
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    line-height:1.8;
+    margin-bottom:30px;
+    color:#d1d5db;
+}
+
+.btn{
+    background:#38bdf8;
+    padding:15px 35px;
+    text-decoration:none;
+    color:white;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+.hero img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.circle{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    overflow:hidden;      /* இதை சேர்க்க வேண்டும் */
+    background:linear-gradient(135deg,#38bdf8,#9333ea);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 40px #38bdf8;
+    animation:float 4s infinite ease-in-out;
+}
+/*.circle{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#38bdf8,#9333ea);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:120px;
+    box-shadow:0 0 40px #38bdf8;
+    animation:float 4s infinite ease-in-out;
+}*/
+
+@keyframes float{
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+.card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:15px;
+    line-height:2;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+.edu-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.edu-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.edu-card:hover{
+    transform:translateY(-10px);
+    background:#334155;
+}
+
+.edu-card h4{
+    margin-top:20px;
+    font-size:25px;
+    color:#38bdf8;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skills div{
+    background:#1e293b;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    font-size:22px;
+    transition:.3s;
+}
+
+.skills div:hover{
+    background:#38bdf8;
+    transform:scale(1.08);
+}
+
+.contact-card{
+    max-width:500px;
+    margin:auto;
+    background:#1e293b;
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.contact-card i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+}
+
+.typing{
+    border-right:4px solid #38bdf8;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:45px;
+}
+ 
+/*.circle{
+    width:220px;
+    height:220px;
+    font-size:90px;
+    margin-bottom:30px;
+}*/
+
+nav{
+    display:none;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">GAJALAKSHMI</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a href="resume.pdf" class="resume-btn" download>
+    <i class="fa-solid fa-download"></i> Resume
+</a>
+
+</header>
+
+<section id="home" class="hero">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1><span class="typing"></span></h1>
+
+<h2>B.Tech Information Technology Student</h2>
+
+<p>
+Passionate about Web Development and Programming.
+I enjoy creating modern websites and learning new technologies.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+<div class="hero-image">
+<div class="circle">
+    <img src="profile.jpeg" alt="Gajalakshmi Profile">
+</div>
+
+ <!--<div class="circle">
+<i class="fa-solid fa-user"></i>
+</div>-->
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+My name is <b>Gajalakshmi</b>. I am currently pursuing
+<b>B.Tech Information Technology</b> at
+<b>P.T. Lee Chengalvaraya Naicker College of Engineering and Technology, Kanchipuram.</b>
+
+<br><br>
+
+I am interested in Web Development and Software Development.
+I enjoy designing attractive websites and continuously improving my programming skills.
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="edu-container">
+
+<div class="edu-card">
+<h3>B.Tech Information Technology</h3>
+<p>P.T. Lee Chengalvaraya Naicker College of Engineering and Technology</p>
+<span>Kanchipuram</span>
+</div>
+
+<div class="edu-card">
+<h3>Higher Secondary (12th)</h3>
+<p>Government Girls Higher Secondary School</p>
+<span>Arcot</span>
+<h4>78%</h4>
+</div>
+
+<div class="edu-card">
+<h3>SSLC (10th)</h3>
+<p>AAGHSS</p>
+<span>Vilapakkam</span>
+<h4>85%</h4>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+<div>HTML</div>
+<div>CSS</div>
+<div>JavaScript</div>
+<div>Java</div>
+<div>C</div>
+<div>C++</div>
+<div>SQL</div>
+</div>
+
+</section>
+
+
+<section id="contact">
+
+    <h2 class="title">Contact</h2>
+
+    <div class="contact-card">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <h3>Gmail</h3>
+
+        <p>
+            <a href="mailto:gajalakshmih8@gmail.com"
+               style="color:#38bdf8; text-decoration:none; font-size:18px;">
+                <i class="fa-brands fa-google"></i>
+                gajalakshmih8@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+Made with ❤ by Gajalakshmi
+</footer>
+
+<script>
+const text = "Gajalakshmi";
+let index = 0;
+
+function typingEffect() {
+    if(index < text.length){
+        document.querySelector(".typing").textContent += text.charAt(index);
+        index++;
+        setTimeout(typingEffect, 200);
+    }
+}
+
+typingEffect();
+</script>
+
+</body>
+</html>
